@@ -12,7 +12,7 @@ const tusServer = new Server({
   path: "/api/upload",
   datastore: new FileStore({ directory: path.resolve(env.uploadDir) }),
   namingFunction: () => generateVideoId(),
-  onUploadFinish: async (_req, res, upload) => {
+  onUploadFinish: async (_req, upload) => {
     const videoId = upload.id;
     const inputPath = path.join(path.resolve(env.uploadDir), videoId);
 
@@ -24,7 +24,7 @@ const tusServer = new Server({
     });
 
     console.log(`[Queue] Job pushed for videoId: ${videoId}`);
-    return res;
+    return {};
   },
 });
 

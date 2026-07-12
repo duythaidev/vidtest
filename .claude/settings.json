@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(node -v)",
+      "PowerShell(npm -v)",
+      "PowerShell(docker -v)",
+      "PowerShell(ffmpeg -version 2>&1)",
+      "PowerShell(npm install)",
+      "PowerShell(docker compose up -d)",
+      "PowerShell(docker compose ps)",
+      "PowerShell(npm run dev)"
+    ]
+  }
+}
