@@ -1,0 +1,6 @@
+node_modules/
+dist/
+backend/uploads/
+backend/hls-output/
+.env
+*.log

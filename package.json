@@ -1,0 +1,10 @@
+{
+  "name": "video-hls-pipeline",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n REDIS,API,WORKER,WEB -c blue,green,yellow,magenta \"docker compose up\" \"npm run dev:api --prefix backend\" \"npm run dev:worker --prefix backend\" \"npm run dev --prefix frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
